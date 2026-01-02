@@ -11,6 +11,7 @@ const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
+    burger.classList.toggle('toggle');
     if(navLinks.style.display === 'flex') {
         navLinks.style.display = 'none';
     } else {
@@ -18,11 +19,9 @@ burger.addEventListener('click', () => {
         navLinks.style.position = 'absolute';
         navLinks.style.right = '0';
         navLinks.style.top = '70px';
-        navLinks.style.background = getComputedStyle(document.body).getPropertyValue('--nav-bg');
         navLinks.style.flexDirection = 'column';
         navLinks.style.width = '100%';
         navLinks.style.padding = '20px';
-        navLinks.style.borderBottom = '2px solid var(--accent)';
     }
 });
 

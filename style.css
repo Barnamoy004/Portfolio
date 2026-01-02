@@ -168,6 +168,7 @@ nav {
 .burger {
     display: none;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .burger .line {
@@ -567,4 +568,22 @@ footer {
     .role-text { font-size: 1.5rem; }
     .big-contact { font-size: 2.5rem; }
     .burger { display: block; }
+
+    .nav-links {
+        background-color: var(--bg-color);
+        border-bottom: 2px solid var(--accent);
+    }
+    .nav-links a {
+        color: var(--text-primary);
+    }
+
+    .toggle .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line:nth-child(2) {
+        opacity: 0;
+    }
+    .toggle .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
