@@ -571,10 +571,29 @@ footer {
 
     .nav-links {
         background-color: var(--bg-color);
-        border-bottom: 2px solid var(--accent);
+        border-left: 2px solid var(--accent);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 998;
     }
+    
+    .nav-active {
+        transform: translateX(0%);
+    }
+
     .nav-links a {
         color: var(--text-primary);
+        font-size: 1.2rem;
+        margin: 20px 0;
     }
 
     .toggle .line:nth-child(1) {

@@ -11,18 +11,8 @@ const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
-    if(navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-    } else {
-        navLinks.style.display = 'flex';
-        navLinks.style.position = 'absolute';
-        navLinks.style.right = '0';
-        navLinks.style.top = '70px';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.width = '100%';
-        navLinks.style.padding = '20px';
-    }
 });
 
 const themeToggle = document.getElementById('theme-toggle');
